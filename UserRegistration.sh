@@ -10,6 +10,7 @@ PATTERN="^[A-Z]{1}[a-zA-Z]{2,}"
 if [[ $FIRSTNAME =~ $PATTERN ]] && [[ $LASTNAME =~ $PATTERN ]]
 then
 	echo "Name is valid"
+	NAME=1
 else
 	echo "Name is invalid"
 fi
@@ -22,6 +23,7 @@ PATTERN="^[0-9a-z]+[+_.-]?[0-9a-z]+[@][a-z]+[.]{1}[a-z]{2,}[.]?[a-z]+$"
 if [[ $EMAIL =~ $PATTERN ]]
 then
 	echo "Email is valid"
+	EMAIL_VAL=1
 else
 	echo "Email is invalid"
 fi
@@ -34,6 +36,19 @@ PATTERN="^[0-9]{2}[ ][0-9]{10}"
 if [[ $MOBILE_NUMBER =~ $PATTERN ]]
 then
 	echo "Mobile Number is valid"
+	NUMBER=1
 else
 	echo "Mobile Number is invalid"
+fi
+
+#Use case 5
+
+read -p "Enter the Password:" PASSWORD
+
+PATTERN="^[a-zA-Z]{8,}"
+if [[ $PASSWORD =~ $PATTERN ]] && [ $NAME -eq 1 ] && [ $EMAIL_VAL -eq 1 ] && [ $NUMBER -eq 1 ]
+then
+	echo "Password is valid"
+else
+	echo "PAssword is invalid"
 fi
