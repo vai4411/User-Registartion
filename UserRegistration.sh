@@ -53,5 +53,5 @@ if [[ $PASSWORD =~ $PATTERN ]] && [ $NAME -eq 1 ] && [ $EMAIL_VAL -eq 1 ] && [ $
 then
 	echo "Password is valid"
 else
-	echo "PAssword is invalid"
+	echo "Password is invalid"
 fi
