@@ -1,11 +1,12 @@
 #!/bin/bash -x
 
-read -p "Enter Name:" FIRSTNAME
+#Use case 1
+read -p "Enter First Name:" FIRSTNAME
 
 PATTERN=^[A-Z]{1}[a-zA-Z]{2,}
 if [[ $FIRSTNAME =~ $PATTERN ]]
 then
-	echo "Name is valid"
+	echo "First Name is valid"
 else
-	echo "Name is invalid"
+	echo "First Name is invalid"
 fi
