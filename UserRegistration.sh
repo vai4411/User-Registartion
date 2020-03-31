@@ -6,6 +6,7 @@
 read -p "Enter First Name:" FIRSTNAME
 read -p "Enter Last Name:" LASTNAME
 
+NAME=0
 PATTERN="^[A-Z]{1}[a-zA-Z]{2,}"
 if [[ $FIRSTNAME =~ $PATTERN ]] && [[ $LASTNAME =~ $PATTERN ]]
 then
@@ -19,6 +20,7 @@ fi
 
 read -p "Enter Email Address:" EMAIL
 
+EMAIL_VAL=0
 PATTERN="^[0-9a-z]+[+_.-]?[0-9a-z]+[@][a-z]+[.]{1}[a-z]{2,}[.]?[a-z]+$"
 if [[ $EMAIL =~ $PATTERN ]]
 then
@@ -32,6 +34,7 @@ fi
 
 read -p "Enter Mobile Number:" MOBILE_NUMBER
 
+NUMBER=0
 PATTERN="^[0-9]{2}[ ][0-9]{10}"
 if [[ $MOBILE_NUMBER =~ $PATTERN ]]
 then
