@@ -47,18 +47,19 @@ fi
 #Use case 5
 #Use case 6
 #Use case 7
+#Use case 8
 
-if [ $NAME -eq 1 ] && [ $NUMBER -eq 1 ] && [ $EMAIL_VAL -eq 1 ] 
-then
+#if [ $NAME -eq 1 ] && [ $NUMBER -eq 1 ] && [ $EMAIL_VAL -eq 1 ] 
+#then
 	read -p "Enter the Password:" PASSWORD
 
 	PATTERN="[0-9A-Za-z]{8,}"
-	if [[ $PASSWORD =~ $PATTERN ]] && [[ $PASSWORD == *[[:upper:]]* ]] && [[ $PASSWORD == *[[:digit:]]* ]]
+	if [[ $PASSWORD =~ $PATTERN ]] && [[ $PASSWORD == *[[:upper:]]* ]] && [[ $PASSWORD == *[[:digit:]]* ]] && [[ ! $PASSWORD == ^[[:alnum:]]+ ]]
 	then	
 		echo "Password is valid"
 	else
 		echo "Password is invalid"
 	fi
-else
-	echo "Conditions is invalid"
-fi
+#else
+#	echo "Conditions is invalid"
+#fi
