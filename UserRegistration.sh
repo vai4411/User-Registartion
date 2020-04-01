@@ -52,7 +52,8 @@ then
 	read -p "Enter the Password:" PASSWORD
 
 	PATTERN="^[A-Za-z]{8,}"
-	if [[ $PASSWORD =~ $PATTERN ]]
+	if [[ $PASSWORD =~ $PATTERN ]] && [[ $PASSWORD == *[[:upper:]]* ]]
+	then	
 		echo "Password is valid"
 	else
 		echo "Password is invalid"
